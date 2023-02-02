@@ -32,8 +32,11 @@ $data = json_decode($send, TRUE);
         .city {
             background-color: grey;
             color: white;
-            border: 5px solid black;
-            margin: 00px;
+            border: 2px solid;
+            width: 500px;
+            height: 400px;
+            margin-left: 600px;
+            margin-top: 100px;
             padding: 50px;
         }
 </style>
@@ -41,6 +44,7 @@ $data = json_decode($send, TRUE);
 </head>
     <body>
         <div class ="city">
+            <center>
             <h1 >Cuaca di <?php echo $data['name'];?> Hari ini adalah </h1>
                 <img src="http://openweathermap.org/img/wn/<?=$data['weather'][0]['icon']?>@4x.png" alt="">
              <h2>
@@ -52,6 +56,7 @@ $data = json_decode($send, TRUE);
             <h5>
                 Suhu : <?php echo $data['main']['temp'];?> °c
             </h5>
+            </center>
         </div>
     </body>
 </html>
